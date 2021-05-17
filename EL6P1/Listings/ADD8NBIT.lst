@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  ADD8NBIT                                                             05/05/2021 12:03:00 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ADD8NBIT.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ADD8NBIT.ASM SET(SMALL) DEBUG PRINT(.\Listings\ADD8NBIT.lst) OBJECT(.\O
+                      bjects\ADD8NBIT.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7905              2     MOV R1,#05H;COUNT
+0002 7830              3     MOV R0,#30H;DATA
+0004 E6                4     MOV A,@R0
+0005 08                5     INC R0
+                       6     ;DEC R1
+                       7     ;MOV B,A
+0006 86F0              8     BACK:MOV B,@R0
+0008 25F0              9     ADD A,B
+000A 5001             10     JNC LOOP1
+000C 0A               11     INC R2
+000D 08               12     LOOP1:INC R0
+000E D9F6             13     DJNZ R1,BACK
+0010 F540             14     MOV 40H,A
+0012 8A41             15     MOV 41H,R2
+                      16     END
+A51 MACRO ASSEMBLER  ADD8NBIT                                                             05/05/2021 12:03:00 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BACK . . . . . . .  C ADDR   0006H   A   
+LOOP1. . . . . . .  C ADDR   000DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

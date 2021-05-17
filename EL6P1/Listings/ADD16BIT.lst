@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  ADD16BIT                                                             05/05/2021 12:11:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ADD16BIT.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ADD16BIT.ASM SET(SMALL) DEBUG PRINT(.\Listings\ADD16BIT.lst) OBJECT(.\O
+                      bjects\ADD16BIT.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7800              2     MOV R0,#00H
+0002 7900              3     MOV R1,#00H
+0004 E532              4     MOV A,32H
+0006 8542F0            5     MOV B,42H
+0009 25F0              6     ADD A,B
+000B 5001              7     JNC LOOP1
+000D 08                8     INC R0
+000E F552              9     LOOP1:MOV 52H,A
+0010 8821             10     MOV 21H,R0
+0012 E531             11     MOV A,31H
+0014 8541F0           12     MOV B,41H
+0017 35F0             13     ADDC A,B
+0019 5001             14     JNC LOOP2
+001B 09               15     INC R1
+001C F551             16     LOOP2:MOV 51H,A
+001E 8950             17     MOV 50H,R1
+                      18     END
+A51 MACRO ASSEMBLER  ADD16BIT                                                             05/05/2021 12:11:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP1. . . . . . .  C ADDR   000EH   A   
+LOOP2. . . . . . .  C ADDR   001CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

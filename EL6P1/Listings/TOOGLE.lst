@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  TOOGLE                                                               05/17/2021 13:01:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\TOOGLE.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE TOOGLE.ASM SET(SMALL) DEBUG PRINT(.\Listings\TOOGLE.lst) OBJECT(.\Objec
+                      ts\TOOGLE.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 C290              2     LOOP: CLR P1.0
+0002 110A              3     CALL DELAY
+0004 D290              4     SETB P1.0
+0006 110A              5     CALL DELAY
+0008 80F6              6     SJMP LOOP
+000A 758910            7     DELAY : MOV TMOD,#10H
+000D 758DDC            8     MOV TH1,#0DCH
+0010 758B00            9     MOV TL1,#00H
+0013 D28E             10     SETB TR1
+0015                  11     BACK:
+0015 308FFD           12     JNB TF1,BACK
+0018 C28E             13     CLR TR1
+001A C28F             14     CLR TF1
+001C 22               15     RET
+                      16     END
+A51 MACRO ASSEMBLER  TOOGLE                                                               05/17/2021 13:01:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0015H   A   
+DELAY. . . . . . .  C ADDR   000AH   A   
+LOOP . . . . . . .  C ADDR   0000H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

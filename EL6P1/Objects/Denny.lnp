@@ -1,0 +1,3 @@
+".\Objects\DATAOCCURE.obj" 
+TO ".\Objects\Denny" 
+PRINT(".\Listings\Denny.m51")

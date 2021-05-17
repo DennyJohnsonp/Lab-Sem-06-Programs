@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  ADD8BIT                                                              05/05/2021 13:24:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ADD8BIT.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ADD8BIT.ASM SET(SMALL) DEBUG PRINT(.\Listings\ADD8BIT.lst) OBJECT(.\Obj
+                      ects\ADD8BIT.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 E531              2     MOV A,31H
+0002 8541F0            3     MOV B,41H
+0005 25F0              4     ADD A,B
+0007 5001              5     JNC LOOP1
+0009 0A                6     INC R2
+000A F551              7     LOOP1:MOV 51H,A
+000C 8A50              8     MOV 50H,R2
+                       9     END
+A51 MACRO ASSEMBLER  ADD8BIT                                                              05/05/2021 13:24:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP1. . . . . . .  C ADDR   000AH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

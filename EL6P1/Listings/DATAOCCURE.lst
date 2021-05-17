@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  DATAOCCURE                                                           05/17/2021 12:17:51 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\DATAOCCURE.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE DATAOCCURE.ASM SET(SMALL) DEBUG PRINT(.\Listings\DATAOCCURE.lst) OBJECT
+                      (.\Objects\DATAOCCURE.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7A0A              2     MOV R2,#0AH
+0002 7830              3     MOV R0,#30H
+0004 7940              4     MOV R1,#40H
+0006 C3                5     BACK:CLR C
+0007 E7                6     MOV A, @R1
+0008 86F0              7     MOV B,@R0
+000A B5F001            8     CJNE A,B,FORWARD
+000D 0B                9     INC R3
+000E 08               10     FORWARD:INC R0
+000F DAF5             11     DJNZ R2,BACK
+0011 8B50             12     MOV 50H,R3
+                      13     END
+A51 MACRO ASSEMBLER  DATAOCCURE                                                           05/17/2021 12:17:51 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BACK . . . . . . .  C ADDR   0006H   A   
+FORWARD. . . . . .  C ADDR   000EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

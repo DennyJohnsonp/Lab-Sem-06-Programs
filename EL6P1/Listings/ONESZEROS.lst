@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  ONESZEROS                                                            05/17/2021 11:35:19 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ONESZEROS.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ONESZEROS.ASM SET(SMALL) DEBUG PRINT(.\Listings\ONESZEROS.lst) OBJECT(.
+                      \Objects\ONESZEROS.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7830              2     MOV R0,#30H ;DATA
+0002 7940              3     MOV R1,#40H ;RESULT ADDRESS
+0004 8003              4     SJMP FIRST
+0006 08                5     REPEAT:INC R0
+0007 C200              6     CLR 00H
+0009 7C08              7     FIRST:MOV R4,#08H ;COUNT
+000B E6                8     MOV A,@R0
+000C 33                9     BACK:RLC A
+000D 5003             10     JNC ZERO
+000F 0A               11     INC R2
+0010 8001             12     SJMP FORW
+0012 0B               13     ZERO:INC R3
+0013 DCF7             14     FORW:DJNZ R4,BACK
+0015 2000EE           15     JB 00H,REPEAT
+0018 EA               16     MOV A, R2
+0019 F7               17     MOV @R1,A
+001A 09               18     INC R1
+001B EB               19     MOV A,R3
+001C F7               20     MOV @R1,A
+                      21     END
+A51 MACRO ASSEMBLER  ONESZEROS                                                            05/17/2021 11:35:19 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   000CH   A   
+FIRST. . . . . . .  C ADDR   0009H   A   
+FORW . . . . . . .  C ADDR   0013H   A   
+REPEAT . . . . . .  C ADDR   0006H   A   
+ZERO . . . . . . .  C ADDR   0012H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

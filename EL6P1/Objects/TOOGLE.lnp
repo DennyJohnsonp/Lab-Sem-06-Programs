@@ -1,0 +1,3 @@
+".\Objects\TOOGLE.obj" 
+TO ".\Objects\TOOGLE" 
+PRINT(".\Listings\TOOGLE.m51")

@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  INTERCHNAGE                                                          05/17/2021 12:14:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\INTERCHNAGE.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE INTERCHNAGE.ASM SET(SMALL) DEBUG PRINT(.\Listings\INTERCHNAGE.lst) OBJE
+                      CT(.\Objects\INTERCHNAGE.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7A05              2     MOV R2,#05H
+0002 7830              3     MOV R0,#30H
+0004 7940              4     MOV R1,#40H
+0006 E6                5     BACK:MOV A, @R0
+0007 87F0              6     MOV B,@R1
+0009 F7                7     MOV @R1,A
+000A A6F0              8     MOV @R0,B
+000C 08                9     INC R0
+000D 09               10     INC R1
+000E DAF6             11     DJNZ R2,BACK
+                      12     END
+A51 MACRO ASSEMBLER  INTERCHNAGE                                                          05/17/2021 12:14:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BACK . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

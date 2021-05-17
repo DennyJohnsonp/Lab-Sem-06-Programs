@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  SMALLESTNO                                                           05/13/2021 10:38:57 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\SMALLESTNO.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE SMALLESTNO.ASM SET(SMALL) DEBUG PRINT(.\Listings\SMALLESTNO.lst) OBJECT
+                      (.\Objects\SMALLESTNO.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H 
+0000 7808              2     MOV R0,#08H
+0002 7930              3     MOV R1,#30H
+0004 E7                4     MOV A,@R1
+0005 FA                5     MOV R2,A
+0006 09                6     BACK: INC R1
+0007 87F0              7     MOV B,@R1
+0009 EA                8     MOV A,R2
+000A 95F0              9     SUBB A,B
+000C 4002             10     JC NEXT 
+000E AAF0             11     MOV R2,B
+0010 D8F4             12     NEXT: DJNZ R0,BACK
+0012 8A40             13     MOV 40H,R2
+                      14     END
+                             
+A51 MACRO ASSEMBLER  SMALLESTNO                                                           05/13/2021 10:38:57 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BACK . . . . . . .  C ADDR   0006H   A   
+NEXT . . . . . . .  C ADDR   0010H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

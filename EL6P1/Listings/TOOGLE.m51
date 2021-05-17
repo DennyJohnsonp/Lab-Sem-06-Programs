@@ -1,0 +1,61 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/17/2021  13:01:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\TOOGLE.obj TO .\Objects\TOOGLE PRINT (.\Listings\TOOGLE.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\TOOGLE.obj (TOOGLE)
+
+
+LINK MAP OF MODULE:  .\Objects\TOOGLE (TOOGLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     001DH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\TOOGLE (TOOGLE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TOOGLE
+  C:0015H         SYMBOL        BACK
+  C:000AH         SYMBOL        DELAY
+  C:0000H         SYMBOL        LOOP
+  D:0090H         SYMBOL        P1
+  B:0088H.7       SYMBOL        TF1
+  D:008DH         SYMBOL        TH1
+  D:008BH         SYMBOL        TL1
+  D:0089H         SYMBOL        TMOD
+  B:0088H.6       SYMBOL        TR1
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  C:0006H         LINE#         5
+  C:0008H         LINE#         6
+  C:000AH         LINE#         7
+  C:000DH         LINE#         8
+  C:0010H         LINE#         9
+  C:0013H         LINE#         10
+  C:0015H         LINE#         12
+  C:0018H         LINE#         13
+  C:001AH         LINE#         14
+  C:001CH         LINE#         15
+  -------         ENDMOD        TOOGLE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001DH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=29
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

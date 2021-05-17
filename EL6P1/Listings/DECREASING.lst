@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  DECREASING                                                           05/13/2021 10:55:26 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\DECREASING.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE DECREASING.ASM SET(SMALL) DEBUG PRINT(.\Listings\DECREASING.lst) OBJECT
+                      (.\Objects\DECREASING.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 7C08              2     MOV R4,#08H
+0002 7B08              3     AGAIN:MOV R3,#08H
+0004 7830              4     MOV R0,#30H
+0006 C3                5     CLR C
+0007 E6                6     BACK:MOV A,@R0
+0008 F9                7     MOV R1,A
+0009 08                8     INC R0
+000A E6                9     MOV A,@R0
+000B 99               10     SUBB A,R1
+000C 4006             11     JC SKIP
+000E E6               12     MOV A,@R0
+000F 18               13     DEC R0
+0010 F6               14     MOV @R0,A
+0011 E9               15     MOV A,R1
+0012 08               16     INC R0
+0013 F6               17     MOV @R0,A
+0014 DBF1             18     SKIP:DJNZ R3,BACK
+0016 DCEA             19     DJNZ R4,AGAIN
+                      20     END
+A51 MACRO ASSEMBLER  DECREASING                                                           05/13/2021 10:55:26 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0002H   A   
+BACK . . . . . . .  C ADDR   0007H   A   
+SKIP . . . . . . .  C ADDR   0014H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
